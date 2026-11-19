@@ -1,0 +1,10 @@
+{$CLEO .csa}
+0000: NOP
+
+:EBRIO_LOOP
+wait 100
+// 1. Cargar librería de animación (ej. RIOT / DRINK)
+// 2. Aplicar animación de botella al jugador ($PLAYER_ACTOR)
+// 3. Activar tambaleo al caminar y sacudida/mareo de cámara
+// 4. Esperar duración del efecto y restaurar cámara y movimiento normal
+004E: terminate_this_script
