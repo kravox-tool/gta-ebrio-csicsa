@@ -1,0 +1,22 @@
+name: Empaquetar Mod Ebrio (.csi + .csa)
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Preparar archivos .csi y .csa
+        run: |
+          mkdir -p build_output
+          cp ebrio_menu.txt build_output/ebrio_menu.csi
+          cp ebrio_efecto.txt build_output/ebrio_efecto.csa
+
+      - name: Subir Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebrio_csi_csa
+          path: build_output/*
