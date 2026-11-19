@@ -1,0 +1,8 @@
+{$CLEO .csi}
+0000: NOP
+
+:MENU_EBRIO
+wait 100
+// Activa el hilo/efecto de ebrio (botella de Grove Street + tambaleo + cámara)
+// Nota: Debe compilarse a binario SCM válido para tu versión de CLEO Android.
+004E: terminate_this_script
